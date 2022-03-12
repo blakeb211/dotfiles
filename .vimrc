@@ -37,6 +37,8 @@ map <F3> :e ~/.vimrc<CR>
 set hidden
 " turn spellcheck off
 set nospell
+" make vim respond to the mouse
+set mouse 
 set mousefocus
 
 " file type recognition
