@@ -4,8 +4,6 @@ filetype plugin on
 filetype indent on
 " syntax highlighting
 syntax on
-" scroll a bit horizontally when at the end of the line
-set sidescroll=6
 " open new split panes to right and below (as you probably expect)
 set splitright
 set splitbelow
@@ -17,7 +15,7 @@ endif
 
 call plug#begin()
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 " make cache always same location
 let g:gutentags_cache_dir = expand('~/.cache/vim/ctags/')
@@ -29,7 +27,7 @@ let g:gutentags_ctags_extra_args = [
 " in normal mode F2 will save the file
 nmap <F2> :w<CR>
 " in insert mode F2 will exit insert, save, enters insert again
-imap <F2> <ESC>:w<CR>i
+imap <F2> <ESC>:w<CR>i<CR>
 " edit vimrc file
 map <F3> :e ~/.vimrc<CR>
 
@@ -38,17 +36,7 @@ set hidden
 " turn spellcheck off
 set nospell
 " make vim respond to the mouse
-set mouse 
+set mouse=a
 set mousefocus
-
-" file type recognition
-filetype on
-filetype plugin on
-filetype indent on
-" syntax highlighting
-syntax on
-" scroll a bit horizontally when at the end of the line
-set sidescroll=6
-" open new split panes to right and below (as you probably expect)
-set splitright
-set splitbelow
+"chg work directory to the current file
+set autochdir
