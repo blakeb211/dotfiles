@@ -13,6 +13,7 @@ endif
 call plug#begin()
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'cjuniet/clang-format.vim'
 call plug#end()
 " make cache always same location
 let g:gutentags_cache_dir = expand('~/.cache/vim/ctags/')
