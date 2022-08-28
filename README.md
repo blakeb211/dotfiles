@@ -1,4 +1,3 @@
-# vimrc
-my vimrc file for vim8
-
-install vim-gtk3
+# dotfiles
+* my vimrc file for vim8
+* bashrc
