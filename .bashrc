@@ -155,3 +155,8 @@ unset __conda_setup
 export BLAS_INC=/usr/local/src/OpenBLAS/include/
 export BLAS_LIB=/usr/local/src/OpenBLAS/lib/
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/src/OpenBLAS/lib
+
+alias b2d="cd ~/wrk/game-reps/blaster-2d"
+alias gt="cd ~/wrk/georgetown"
+alias getTok="cat ~/gitToken.txt | xclip -selection c"
+
