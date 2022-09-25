@@ -39,7 +39,7 @@ set nospell
 " make vim respond to the mouse
 set mouse=a
 set mousefocus
-set guifont=Monospace\ Regular\ 13
+set guifont=Monospace\ Regular\ 14
 set guioptions -=T
 "chg work directory to the current file
 set autochdir

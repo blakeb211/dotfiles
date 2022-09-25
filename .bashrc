@@ -157,6 +157,9 @@ export BLAS_LIB=/usr/local/src/OpenBLAS/lib/
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/src/OpenBLAS/lib
 
 alias b2d="cd ~/wrk/game-reps/blaster-2d"
-alias gt="cd ~/wrk/georgetown"
+alias gt="cd ~/georgetown"
+alias ds="cd ~/wrk/ds-reps/"
+alias gr="cd ~/wrk/student-outcomes"
 alias getTok="cat ~/gitToken.txt | xclip -selection c"
-
+alias srcBash="source ~/.bashrc"
+alias autopep="autopep8 --in-place --aggressive $1"
