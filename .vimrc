@@ -49,12 +49,12 @@ set autoindent
 set expandtab
 set smartindent
 set cindent
-colorscheme default 
+colorscheme darkblue 
 set visualbell 
 set makeprg=./compile
 "let &makeprg='python3 %'
 set cul
-:hi CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
+:hi CursorLine cterm=NONE ctermbg=darkblue ctermfg=lightred guibg=lightred guifg=white
 
 " syntax highlighting
 syntax on

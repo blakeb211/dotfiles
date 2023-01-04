@@ -123,31 +123,31 @@ fi
 export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
 
 # add /usr/local/lib for wxwidgets (known as blakebuild to dpkg) 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-. "$HOME/.cargo/env"
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+# . "$HOME/.cargo/env"
 
 # fnm
-export PATH=/home/bb/.fnm:$PATH
-eval "`fnm env`"
+# export PATH=/home/bb/.fnm:$PATH
+# eval "`fnm env`"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
- __conda_setup="$('/home/bb/miniconda3/conda' 'shell.bash' 'hook' 2> /dev/null)"
- if [ $? -eq 0 ]; then
-     eval "$__conda_setup"
- else
-     if [ -f "/home/bb/miniconda3/etc/profile.d/conda.sh" ]; then
-         . "/home/bb/miniconda3/etc/profile.d/conda.sh"
-     else
-         export PATH="/home/bb/miniconda3/bin:$PATH"
-     fi
- fi
- unset __conda_setup
+__conda_setup="$('/home/bb/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bb/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bb/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bb/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # add OpenBLAS environment variables
@@ -156,11 +156,17 @@ export BLAS_INC=/usr/local/src/OpenBLAS/include/
 export BLAS_LIB=/usr/local/src/OpenBLAS/lib/
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/src/OpenBLAS/lib
 
+export PATH="/home/bb/racket/bin:$PATH"
 alias b2d="cd ~/wrk/game-reps/blaster-2d"
-alias gt="cd ~/georgetown"
-alias godir="cd ~/wrk/go"
-alias ds="cd ~/wrk/ds-reps/"
-alias gr="cd ~/wrk/student-outcomes"
+alias gt="cd ~/gt-datascience-cert"
+alias godir="cd ~/go"
+alias ds="cd ~/ds-reps/"
+alias vact="source ./virtualenv/bin/activate"
+alias ml="conda activate ml"
+alias gr="cd ~/student-outcomes"
 alias getTok="cat ~/gitToken.txt | xclip -selection c"
 alias srcBash="source ~/.bashrc"
 alias autopep="autopep8 --in-place --aggressive $1"
+alias gs='git status'
+alias feh='feh --auto-zoom'
+
