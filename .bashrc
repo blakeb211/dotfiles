@@ -122,6 +122,8 @@ fi
 # add cuda path
 export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
 
+# add go path
+export PATH=$PATH:/usr/local/go/bin
 # add /usr/local/lib for wxwidgets (known as blakebuild to dpkg) 
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
@@ -168,5 +170,7 @@ alias getTok="cat ~/gitToken.txt | xclip -selection c"
 alias srcBash="source ~/.bashrc"
 alias autopep="autopep8 --in-place --aggressive $1"
 alias gs='git status'
+alias sb='source ./env/bin/activate'
 alias feh='feh --auto-zoom'
 
+export PATH="$PATH:/home/bb/upwork_swimdown/simulate/salmon/salmon-1.9.0_linux_x86_64/bin"
