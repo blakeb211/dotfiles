@@ -2,7 +2,8 @@
 filetype on
 filetype plugin on
 filetype indent on
-" open new split panes to right and below (as you probably expect) set splitright set splitbelow nnoremap ; :
+" open new split panes to right and below (as you probably expect) set splitright set splitbelow 
+nnoremap ; :
 set path+=/usr/local/include/wx-3.1/**
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -28,7 +29,9 @@ nmap <F2> :w<CR>
 imap <F2> <ESC>:w<CR>i<CR>
 " edit vimrc file
 map <F3> :e ~/.vimrc<CR>
-map <F4> :!./build/gfx-prog<CR>
+" map <F5> :!./compile.sh<CR>
+nnoremap <F5> :w<CR>:let output = system('python3 ' . shellescape(expand("%"))) \| vnew \| setlocal buftype=nofile bufhidden=wipe nobuflisted \| call append(0, split(output, '\n'))<CR>G
+map <F6> :!./main<CR>
 map <F12> :buffers<CR>
 
 set number
@@ -39,7 +42,7 @@ set nospell
 " make vim respond to the mouse
 set mouse=a
 set mousefocus
-set guifont=Monospace\ Regular\ 14
+set guifont=Monospace\ Regular\ 13
 set guioptions -=T
 "chg work directory to the current file
 set autochdir
@@ -49,9 +52,9 @@ set autoindent
 set expandtab
 set smartindent
 set cindent
-colorscheme darkblue 
+colorscheme industry 
 set visualbell 
-set makeprg=./compile
+set makeprg=./compile.sh
 "let &makeprg='python3 %'
 set cul
 :hi CursorLine cterm=NONE ctermbg=darkblue ctermfg=lightred guibg=lightred guifg=white
