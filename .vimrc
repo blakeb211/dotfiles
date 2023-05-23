@@ -32,6 +32,7 @@ map <F3> :e ~/.vimrc<CR>
 " map <F5> :!./compile.sh<CR>
 nnoremap <F5> :w<CR>:let output = system('python3 ' . shellescape(expand("%"))) \| vnew \| setlocal buftype=nofile bufhidden=wipe nobuflisted \| call append(0, split(output, '\n'))<CR>G
 map <F6> :!./main<CR>
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 map <F12> :buffers<CR>
 
 set number
