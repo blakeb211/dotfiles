@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
 fi
 
 # add cuda path
-export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
 # add go path
 export PATH=$PATH:/usr/local/go/bin
@@ -171,7 +171,7 @@ alias ml="conda activate ml"
 alias gr="cd ~/student-outcomes"
 alias getTok="cat ~/gitToken.txt | xclip -selection c"
 alias srcBash="source ~/.bashrc"
-alias autopep="autopep8 --in-place --aggressive $1"
+alias autopep="autopep8 --in-place --max-line-length 110 $1"
 alias gs='git status'
 alias sb='source ./myenv/bin/activate'
 alias feh='feh --auto-zoom'
@@ -179,3 +179,9 @@ alias feh='feh --auto-zoom'
 export PATH="$PATH:~/salmon-latest_linux_x86_64/bin"
 export WINEPREFIX=~/prefix32
 export WINEARCH=win32
+
+PATH="/home/bb/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/bb/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/bb/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/bb/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bb/perl5"; export PERL_MM_OPT;
